@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { client } from '../lib/client'
+import { client } from '../libs/client'
 
 export default function Home({blog}) {
   return (
