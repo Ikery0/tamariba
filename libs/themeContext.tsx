@@ -1,17 +1,13 @@
 import React, { useContext, createContext } from "react";
-import { Context } from "vm";
-
-
 type Theme = 'light' | 'dark';
-const theme: Theme = 'light' 
 
-export const ThemeContext = React.createContext({});
+export const ThemeContext = createContext('light');
 
 export const ThemeProvider = (props) => {
  const { children } = props
 
  return (
-   <ThemeContext.Provider value={theme}>
+   <ThemeContext.Provider value={'light'}>
      { children }
    </ThemeContext.Provider>
  )
