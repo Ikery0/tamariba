@@ -1,6 +1,6 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html,
 body {
@@ -23,11 +23,13 @@ a {
 }
 
 :root[data-theme="light"] {
+  color-scheme: light;
   --main-color: #374151;
   --bg-color: #F9FAFB;
 }
 
 :root[data-theme="dark"] {
+  color-scheme: dark;
   --main-color: #fff;
   --bg-color: #374151;
 }
