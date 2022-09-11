@@ -44,7 +44,7 @@ const ToggleThemeButton = () => {
         aria-label="ダークモード切り替えボタン"
         type="button"
         onClick={onClicktoggleTheme}
-        className={`${obj.color} ${obj.bg} w-16 h-16 p-1  rounded-full duration-300 hover:cursor-pointer hover:opacity-70`}
+        className={`${obj.color} ${obj.bg} w-14 h-14 p-1  rounded-full duration-300 hover:cursor-pointer hover:opacity-70`}
       >
         <span className="flex justify-center items-center">{obj.icon}</span>
       </button>
