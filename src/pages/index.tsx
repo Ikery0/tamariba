@@ -15,7 +15,7 @@ export default function Home({blog}) {
         {blog.map((blog) => (
           <li key={blog.id}>
             <Link href={`/blog/${blog.id}`}>
-              <a>{blog.title}</a>
+              <a style={{color: 'white'}}>{blog.title}</a>
             </Link>
           </li>
         ))}
