@@ -9,7 +9,7 @@ import Container from "../templates/Container"
 const Header: NextPage = () => {
 
   return (
-    <header className="py-4 lg:fixed w-full">
+    <header className="py-4 lg:fixed w-full z-20">
       <Container size={1280}>
         <div className="flex justify-between relative items-center">
           <MainLogo />
