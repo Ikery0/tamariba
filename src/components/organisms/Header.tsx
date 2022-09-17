@@ -1,4 +1,5 @@
 import { NextPage } from "next"
+import HamburgerMenu from "../atoms/HamburgerMenu"
 import MainLogo from "../atoms/MainLogo"
 import ToggleThemeButton from "../atoms/ToggleThemeButton"
 import HeaderNav from "../molecules/HeaderNav"
@@ -13,6 +14,7 @@ const Header: NextPage = () => {
         <div className="flex justify-between relative items-center">
           <MainLogo />
           <HeaderNav />
+          <HamburgerMenu />
           <ToggleThemeButton />
         </div>
       </Container>

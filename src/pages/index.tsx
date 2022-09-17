@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { client } from '../libs/client'
 import Header from '../components/organisms/Header'
-import ToggleThemeButton from '../components/atoms/ToggleThemeButton'
 import Container from '../components/templates/Container'
 import SectionTitle from '../components/atoms/SectionTitle'
 
