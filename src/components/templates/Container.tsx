@@ -16,10 +16,8 @@ const Container: NextPage<Props> = ({ size, children }) => {
   }
 
   return (
-    <div className="px-4 sm:px-6 lg:px-12">
-      <div className={`${maxWidthClass} w-full m-auto`}>
-        {children}
-      </div>
+    <div className={`${maxWidthClass} w-full px-4 sm:px-6 lg:px-12 m-auto`}>
+      {children}
     </div>
   )
 }

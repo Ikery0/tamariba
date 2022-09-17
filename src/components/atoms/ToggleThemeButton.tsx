@@ -17,7 +17,7 @@ const lightObj: ThemeOptions = {
 
 const darkObj: ThemeOptions = {
   color: 'text-gray-700',
-  bg: 'bg-gray-50',
+  bg: 'bg-gray-200',
   icon: <HalfMoon />,
 }
 
@@ -33,6 +33,9 @@ const ToggleThemeButton = () => {
     window.localStorage.setItem('theme', newTheme)
     const root = window.document.documentElement
     root.setAttribute('data-theme', newTheme)
+    newTheme === 'dark' ?
+      document.documentElement.classList.add('dark')
+      : document.documentElement.classList.remove('dark')
 
     obj = newTheme === 'light' ? lightObj : darkObj
   }
@@ -44,7 +47,7 @@ const ToggleThemeButton = () => {
         aria-label="ダークモード切り替えボタン"
         type="button"
         onClick={onClicktoggleTheme}
-        className={`${obj.color} ${obj.bg} w-14 h-14 p-1  rounded-full duration-300 hover:cursor-pointer hover:opacity-70`}
+        className={`${obj.color} ${obj.bg} fixed bottom-4 right-4 w-14 h-14 p-1  rounded-full duration-300 shadow-md  hover:cursor-pointer hover:opacity-70 lg:static`}
       >
         <span className="flex justify-center items-center">{obj.icon}</span>
       </button>

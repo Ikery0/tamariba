@@ -33,6 +33,10 @@ const ThemeProveder = ({ children }: Props): JSX.Element => {
           
             const root = document.documentElement;
             root.setAttribute("data-theme", theme);
+
+            theme === 'dark' ? 
+            document.documentElement.classList.add('dark')
+            : document.documentElement.classList.remove('dark')
           })();`
         }}
       />
