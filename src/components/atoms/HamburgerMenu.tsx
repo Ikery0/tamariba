@@ -14,14 +14,14 @@ const HamburgerMenu: NextPage = () => {
 
   let spMenuClasses = closeClasses
 
-  const toggleHamburger = (): void =>  {
+  const toggleHamburger = (): void => {
     setText(text === 'menu' ? 'close' : 'menu')
     setExpanded(!expanded)
     setHidden(!hidden)
 
     spMenuClasses = closeClasses ? closeClasses : openClasses
   }
-  
+
 
 
 
@@ -35,13 +35,26 @@ const HamburgerMenu: NextPage = () => {
       >
         <span className="uppercase text-xs font-bold pl-px text-gray-50 text-opacity-90">{text}</span>
       </button>
-      <div
-        id="spMenu"
-        className={`bg-gray-700 z-10`}
-        aria-hidden={hidden}
-      >
-        sp menu
-      </div>
+      {
+        expanded ? (
+          <div
+            id="spMenu"
+            className={`visible bg-gray-700 z-10 opacity-100 duration-300`}
+            aria-hidden={hidden}
+          >
+            sp menu
+          </div>
+        ) : (
+          <div
+            id="spMenu"
+            className={`invisible bg-gray-700 z-10 opacity-0 duration-300`}
+            aria-hidden={hidden}
+          >
+            sp menu
+          </div>
+        )
+
+      }
     </>
   )
 }
