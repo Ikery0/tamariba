@@ -8,7 +8,7 @@ type Props = {
 const SectionTitle: NextPage<Props> = ({ text }) => {
   
   return (
-      <h2 className="lg:container text-3xl font-bold uppercase text-opacity-90 english">{text}</h2>
+      <h2 className="lg:container text-6xl font-bold uppercase text-opacity-90 english">{text}</h2>
   )
 }
 

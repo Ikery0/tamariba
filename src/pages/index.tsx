@@ -14,20 +14,20 @@ export default function Home({ blog }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Container size={1024}>
-        <section>
+      <section className='mt-20 lg:mt-40'>
+        <Container size={1024}>
           <SectionTitle text="blog" />
-        </section>
-        <ul>
-          {blog.map((blog) => (
-            <li key={blog.id}>
-              <Link href={`/blog/${blog.id}`}>
-                <a>{blog.title}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </Container>
+          <ul>
+            {blog.map((blog) => (
+              <li key={blog.id}>
+                <Link href={`/blog/${blog.id}`}>
+                  <a>{blog.title}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
     </div>
   )
 }

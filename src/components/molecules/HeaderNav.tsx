@@ -22,8 +22,7 @@ const HeaderNav: NextPage = () => {
         {NavItemsArray.map(item => (
             <li key={item.link} className="p-2">
               <Link href={item.link}>
-                <a className="font-bold text-white text-opacity-90 duration-300 hover:opacity-70
-                dark:text-gray-700 dark:text-opacity-90">{item.text}</a>
+                <a className="font-bold text-white inline-block p-2 text-opacity-90 dark:text-gray-700 dark:text-opacity-90">{item.text}</a>
               </Link>
             </li>
           ))}

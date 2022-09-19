@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Container from "../templates/Container";
 
 type Props = {
   isOpen: boolean
@@ -28,11 +29,15 @@ const SpNav: NextPage<Props> = ({ isOpen }) => {
   return (
     <>
       <div
-        id="spMenu"
-        className={`${visibility} ${opacity} bg-gray-200 z-10 duration-150`}
+        id="spNav"
+        className={`${visibility} ${opacity} fixed top-0 left-0 w-full h-screen bg-gray-200 z-10 duration-150`}
         aria-hidden={hidden}
       >
+        <Container 
+          size={1024}
+        >
         sp menu
+        </Container>
       </div>
     </>
   )

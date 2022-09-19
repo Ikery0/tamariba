@@ -28,8 +28,8 @@ const HamburgerButton: NextPage<Props> = ({ isOpen, onClick }) => {
   return (
     <button
       type="button"
-      className="fixed grid place-items-center w-14 h-14 bottom-4 left-1/2 -translate-x-1/2 m-auto bg-gray-700 rounded-full lg:hidden dark:bg-gray-50 hover:opacity-70"
-      aria-controls="spMenu"
+      className="fixed grid place-items-center w-14 h-14 bottom-4 left-1/2 -translate-x-1/2 m-auto bg-gray-700 shadow-md rounded-full z-20 lg:hidden dark:bg-gray-200 hover:opacity-70"
+      aria-controls="spNav"
       aria-label={label}
       aria-expanded={isOpen}
       onClick={onClick}
