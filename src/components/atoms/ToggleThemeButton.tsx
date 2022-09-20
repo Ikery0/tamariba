@@ -21,7 +21,6 @@ const darkObj: ThemeOptions = {
   icon: <HalfMoon />,
 }
 
-
 const ToggleThemeButton = () => {
   const [theme, setTheme] = useRecoilState(themeState)
 
@@ -47,7 +46,7 @@ const ToggleThemeButton = () => {
         aria-label="ダークモード切り替えボタン"
         type="button"
         onClick={onClicktoggleTheme}
-        className={`${obj.color} ${obj.bg} fixed bottom-4 right-4 w-14 h-14 p-1  rounded-full duration-300 shadow-md  hover:cursor-pointer hover:opacity-70 lg:static`}
+        className={`${obj.color} ${obj.bg} fixed bottom-4 right-4 w-14 h-14 p-1  rounded-full shadow-md  hover:cursor-pointer z-20 lg:static`}
       >
         <span className="flex justify-center items-center">{obj.icon}</span>
       </button>
