@@ -8,10 +8,6 @@ type NavItems = {
 
 const NavItemsArray: NavItems[] = [
   { text: 'TOP', link: '/' },
-  { text: 'JS', link: '/javascript' },
-  { text: 'TS', link: '/typescript' },
-  { text: 'REACT', link: '/react' },
-  { text: 'Next.js', link: '/nextjs' },
 ]
 
 const HeaderNav: NextPage = () => {
@@ -22,7 +18,7 @@ const HeaderNav: NextPage = () => {
         {NavItemsArray.map(item => (
             <li key={item.link} className="p-2">
               <Link href={item.link}>
-                <a className="font-bold text-white inline-block p-2 text-opacity-90 dark:text-gray-700 dark:text-opacity-90">{item.text}</a>
+                <a className="text-white inline-block p-2 text-opacity-90 dark:text-gray-700 dark:text-opacity-90">{item.text}</a>
               </Link>
             </li>
           ))}

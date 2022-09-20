@@ -34,7 +34,7 @@ const HamburgerButton: NextPage<Props> = ({ isOpen, onClick }) => {
       aria-expanded={isOpen}
       onClick={onClick}
     >
-      <span className="uppercase text-xs font-bold pl-px text-gray-50 text-opacity-90 dark:text-gray-700 dark:text-opacity-100">{text}</span>
+      <span className="uppercase text-xs pl-px text-gray-50 text-opacity-90 dark:text-gray-700 dark:text-opacity-100">{text}</span>
     </button>
   )
 }
