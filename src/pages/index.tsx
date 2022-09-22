@@ -4,8 +4,10 @@ import { client } from '../libs/client'
 import Header from '../components/organisms/Header'
 import Container from '../components/templates/Container'
 import SectionTitle from '../components/atoms/SectionTitle'
+import ArchiveBlock from '../components/molecules/ArchiveBlock'
 
-export default function Home({ blog }) {
+
+export default function Home({ blogs }) {
   return (
     <div>
       <Head>
@@ -18,12 +20,8 @@ export default function Home({ blog }) {
         <Container size={1024}>
           <SectionTitle text="blog" />
           <ul>
-            {blog.map((blog) => (
-              <li key={blog.id}>
-                <Link href={`/blog/${blog.id}`}>
-                  <a>{blog.title}</a>
-                </Link>
-              </li>
+            {blogs.map((blog) => (
+             <ArchiveBlock key={blog.id} blog={blog} />
             ))}
           </ul>
         </Container>
@@ -37,7 +35,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      blog: data.contents,
+      blogs: data.contents,
     }
   }
 }

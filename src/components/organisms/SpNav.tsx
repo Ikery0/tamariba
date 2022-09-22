@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import Link from "next/link";
 import { useRecoilValue } from "recoil";
 import { themeState } from "../../libs/theme";
-import { WhiteArrow } from "../atoms/Arrow";
+import { IconArrow } from "../atoms/icons/IconArrow";
 import Container from "../templates/Container";
 
 type Props = {
@@ -57,7 +57,7 @@ const SpNav: NextPage<Props> = ({ isOpen }) => {
                         <a className="flex justify-between items-center py-2 pr-2 uppercase">
                           <span>{item.text}</span>
                           <span>
-                            <WhiteArrow theme={theme} />
+                            <IconArrow theme={theme} />
                           </span>
                         </a>
                       </Link>

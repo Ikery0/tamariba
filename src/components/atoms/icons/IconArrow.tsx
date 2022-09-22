@@ -1,11 +1,11 @@
 import { NextPage } from "next";
-import  { Theme } from '../../libs/theme'
+import  { Theme } from '../../../libs/theme'
 
 type Props = {
   theme: Theme
 }
 
-export const WhiteArrow: NextPage<Props> = ({theme}) => {
+export const IconArrow: NextPage<Props> = ({theme}) => {
   const pathClass = theme === 'light' ?  'fill-gray-700' : 'fill-gray-50'
 
   return (
