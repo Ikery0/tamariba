@@ -19,7 +19,7 @@ export default function Home({ blogs }) {
       <section className='mt-20 lg:mt-40'>
         <Container size={1024}>
           <SectionTitle text="blog" />
-          <ul className='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
+          <ul className='grid gap-4 md:grid-cols-2 lg:grid-cols-3 mt-6'>
             {blogs.map((blog) => (
              <ArchiveBlock key={blog.id} blog={blog} />
             ))}

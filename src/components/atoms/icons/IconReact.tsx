@@ -1,8 +1,8 @@
 import { NextPage } from "next";
 
-export const IconReact: NextPage = () => {
+const IconReact: NextPage = () => {
   return (
-    <svg width="41" height="36" viewBox="0 0 41 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className="h-full" viewBox="0 0 41 36" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_23_291)">
         <path d="M20.2312 21.6064C22.223 21.6064 23.8376 19.9918 23.8376 18C23.8376 16.0082 22.223 14.3936 20.2312 14.3936C18.2394 14.3936 16.6248 16.0082 16.6248 18C16.6248 19.9918 18.2394 21.6064 20.2312 21.6064Z" fill="#61DAFB" />
         <path d="M20.2312 25.3887C30.9187 25.3887 39.5827 22.0807 39.5827 18C39.5827 13.9193 30.9187 10.6112 20.2312 10.6112C9.54362 10.6112 0.879639 13.9193 0.879639 18C0.879639 22.0807 9.54362 25.3887 20.2312 25.3887Z" stroke="#61DAFB" />
@@ -17,3 +17,5 @@ export const IconReact: NextPage = () => {
     </svg>
   )
 }
+
+export default IconReact

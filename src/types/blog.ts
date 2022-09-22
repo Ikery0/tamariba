@@ -10,7 +10,7 @@ export type Blog = {
     revisedAt: string
     updatedAt: string
   }
-  eyecatch: {
+  eyecatch?: {
     url: string
     width: number
     height: number
