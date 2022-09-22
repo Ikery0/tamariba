@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import Link from "next/link";
 import type { Blog } from "../../types/blog";
+import { makeExcerpt } from "../../libs/makeExcerpt"
 
 type Props = {
   blog: Blog
@@ -8,11 +9,12 @@ type Props = {
 
 const ArchiveBlock: NextPage<Props> = ({ blog }) => {
   return (
-    <li>
+    <li className="rounded-lg shadow-lg">
       <Link href={`blog/${blog.id}`}>
-        <a>
+        <a className="block p-3 lg:p-6">
           <span>{blog.category.name}</span>
-          <h3>{blog.title}</h3>
+          <h3 className="text-lg font-bold mt-6">{blog.title}</h3>
+          <p className="mt-4">{makeExcerpt(blog.excerpt, 50)}</p>
         </a>
       </Link>
     </li>
