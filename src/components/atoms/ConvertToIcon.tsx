@@ -8,7 +8,7 @@ type Props = {
   category: string
 }
 
-export const ConvertToIcon: NextPage<Props> = ({category}) => {
+const ConvertToIcon: NextPage<Props> = ({category}) => {
   switch(category) {
     case 'React' :
       return <IconReact />
@@ -26,3 +26,5 @@ export const ConvertToIcon: NextPage<Props> = ({category}) => {
       return <></>
   }
 }
+
+export default ConvertToIcon

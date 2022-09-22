@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import Link from "next/link";
 import type { Blog } from "../../types/blog";
 import { makeExcerpt } from "../../libs/makeExcerpt"
-import { ConvertToIcon } from "../atoms/convertToIcon";
+import ConvertToIcon from "../atoms/ConvertToIcon"
 
 type Props = {
   blog: Blog
