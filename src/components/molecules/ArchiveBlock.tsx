@@ -10,9 +10,9 @@ type Props = {
 
 const ArchiveBlock: NextPage<Props> = ({ blog }) => {
   return (
-    <li className="shadow-lg">
+    <li className="shadow-lg rounded-2xl">
       <Link href={`blog/${blog.id}`}>
-        <a className="block h-full p-3 lg:p-4 dark:bg-gray-500 rounded-2xl">
+        <a className="block h-full bg-white rounded-2xl p-3 lg:p-4 dark:bg-gray-500">
           <span className="block h-5">
             <ConvertToIcon category={blog.category.name} />
           </span>
