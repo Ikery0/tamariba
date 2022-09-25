@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import { NextPage } from 'next';
 import Image from 'next/image';
-import { useEffect } from 'react';
 import { client } from '../../libs/client';
+import cheerio from 'cheerio';
+import hljs from 'highlight.js'
+import 'highlight.js/styles/nord.css';
 import type { Blog } from '../../types/blog';
 import Header from '../../components/organisms/Header';
 import Container from '../../components/templates/Container';
@@ -61,7 +63,6 @@ export default BlogPage
 
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: 'blog' })
-
   const paths = data.contents.map((content) => `/blog/${content.id}`)
 
   return { paths, fallback: false }
@@ -71,9 +72,18 @@ export const getStaticProps = async (context) => {
   const id = context.params.id
   const data = await client.get({ endpoint: 'blog', contentId: id })
 
+  const $ = cheerio.load(data.content)
+  $('pre code').each((_, elm) => {
+    const result = hljs.highlightAuto($(elm).text());
+    $(elm).html(result.value);
+    $(elm).addClass('hljs');
+  });
+  const highlightedContent = $.html()
+  const highlightedData = {...data, content: highlightedContent}
+  
   return {
     props: {
-      blog: data
+      blog: highlightedData
     }
   }
 }

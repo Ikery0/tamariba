@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "highlight.js": "^11.6.0",
     "iconoir-react": "^5.1.4",
     "microcms-js-sdk": "^2.2.1",
     "next": "^12.3.1",
@@ -19,6 +21,8 @@
   "devDependencies": {
     "@svgr/webpack": "^6.3.1",
     "@tailwindcss/typography": "^0.5.7",
+    "@types/cheerio": "^0.22.31",
+    "@types/highlightjs": "^9.12.2",
     "@types/node": "^18.7.15",
     "@types/react": "^18.0.18",
     "@types/react-dom": "18.0.6",
