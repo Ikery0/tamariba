@@ -1,14 +1,4 @@
-type Obj = {
-  tagFormat: string, 
-  displayFormat: string
-} 
-
-export const convertDateFormat = (arg: string): Obj => {
-  const elms = new GetFormatedElms(arg)
-  return elms.getConvertedObj()
-}
-
-class GetFormatedElms {
+export class GetFormatedElms {
   sourceDate: Date
   formattedYear: string
   formattedMonth: string

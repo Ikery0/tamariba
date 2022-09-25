@@ -8,14 +8,15 @@ import 'highlight.js/styles/nord.css';
 import type { Blog } from '../../types/blog';
 import Header from '../../components/organisms/Header';
 import Container from '../../components/templates/Container';
-import { convertDateFormat } from '../../libs/convertDateFormat';
+import { GetFormatedElms } from "../../libs/convertDateFormat";
 
 type Props = {
   blog: Blog
 }
 
 const BlogPage: NextPage<Props> = ({ blog }) => {
-  const publishDateObj = convertDateFormat(blog.publishedAt)
+  const publishDateObj = new GetFormatedElms(blog.publishedAt).getConvertedObj()
+  const { tagFormat, displayFormat } = publishDateObj
 
   return (
     <>
@@ -31,7 +32,7 @@ const BlogPage: NextPage<Props> = ({ blog }) => {
             <h1 className='text-3xl font-bold dark:text-white mb-0'>{blog.title}</h1>
             <div className='flex justify-between text-sm mt-2'>
               <p className='m-0'>{blog.category.name}</p>
-              <time dateTime={publishDateObj.tagFormat}>{publishDateObj.displayFormat}</time>
+              <time dateTime={tagFormat}>公開日：{displayFormat}</time>
             </div>
             {
               blog.eyecatch ? (
