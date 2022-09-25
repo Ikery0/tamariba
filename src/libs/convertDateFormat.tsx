@@ -5,7 +5,7 @@ type Obj = {
 
 export const convertDateFormat = (arg: string): Obj => {
   const elms = new GetFormatedElms(arg)
-  return elms.obj
+  return elms.getConvertedObj()
 }
 
 class GetFormatedElms {
@@ -18,7 +18,6 @@ class GetFormatedElms {
   constructor(arg: string) {
     this.sourceDate = new Date(arg)
     this._getElements()
-    this._makeObj()
   }
 
   _getElements() {
@@ -31,11 +30,11 @@ class GetFormatedElms {
     this.formattedDate = this._makeTwoDegit(date)
   }
 
-  _makeObj() {
+  getConvertedObj() {
     const forTag: string = `${this.formattedYear}-${this.formattedMonth}-${this.formattedDate}`
     const forDisplay: string = `${this.formattedYear}.${this.formattedMonth}.${this.formattedDate}`
   
-    this.obj = {
+    return {
       tagFormat: forTag, 
       displayFormat: forDisplay
     }
