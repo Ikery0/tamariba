@@ -21,7 +21,7 @@ const ArchiveBlock: NextPage<Props> = ({ blog }) => {
             <span className="block h-5">
               <ConvertToIcon category={blog.category.name} />
             </span>
-            <h3 className="text-lg mt-6">{blog.title}</h3>
+            <h3 className="text-lg mt-6 dark:text-gray-100">{blog.title}</h3>
             <p className="text-sm text-gray-400 mt-4 dark:text-gray-300">{makeExcerpt(blog.excerpt, 80)}</p>
           </div>
           <time

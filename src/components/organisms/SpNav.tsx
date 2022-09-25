@@ -39,7 +39,7 @@ const SpNav: NextPage<Props> = ({ isOpen }) => {
     <>
       <div
         id="spNav"
-        className={`${visibility} ${opacity} fixed top-0 left-0 w-full h-screen bg-gray-50 z-10 duration-300 dark:bg-gray-700`}
+        className={`${visibility} ${opacity} fixed top-0 left-0 w-full h-screen bg-gray-200 z-10 duration-300 dark:bg-gray-700`}
         aria-hidden={hidden}
         aria-modal='true'
         role='dialog'
@@ -52,7 +52,7 @@ const SpNav: NextPage<Props> = ({ isOpen }) => {
               <ul>
                 {
                   menu.map((item) => (
-                    <li key="item" className="border-b border-gray-700 dark:border-gray-50">
+                    <li key="item" className="border-b border-gray-700 dark:border-gray-200">
                       <Link href={item.link}>
                         <a className="flex justify-between items-center py-2 pr-2 uppercase">
                           <span>{item.text}</span>

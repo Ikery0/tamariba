@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import { NextPage } from 'next';
 import Image from 'next/image';
 import { client } from '../../libs/client'
@@ -22,7 +21,7 @@ const BlogPage: NextPage<Props> = ({ blog }) => {
       </Head>
       <Header />
       <main className='mt-20 lg:mt-40'>
-        <section>
+        <article className='prose dark:prose-invert max-w-full'>
           <Container size={1024}>
             <h1>{blog.title}</h1>
             <p>{blog.category.name}</p>
@@ -41,7 +40,7 @@ const BlogPage: NextPage<Props> = ({ blog }) => {
               }}
             />
           </Container>
-        </section>
+        </article>
       </main>
     </>
   )
