@@ -13,7 +13,7 @@ const NavItemsArray: NavItems[] = [
 const HeaderNav: NextPage = () => {
 
   return (
-    <nav className="bg-gray-700 rounded-full h-14 shadow-md dark:bg-gray-200">
+    <nav className="absolute left-1/2 -translate-x-1/2 bg-gray-700 rounded-full h-14 shadow-md dark:bg-gray-200">
       <ul className="hidden h-full justify-between items-center px-3 lg:flex">
         {NavItemsArray.map(item => (
             <li key={item.link} className="p-2">
