@@ -16,8 +16,7 @@ class GetFormatedElms {
   obj: {tagFormat: string, displayFormat: string}
 
   constructor(arg: string) {
-    const parsedDate: number = Date.parse(arg)
-    this.sourceDate = new Date(parsedDate)
+    this.sourceDate = new Date(arg)
     this._getElements()
     this._makeObj()
   }
