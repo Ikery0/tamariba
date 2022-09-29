@@ -3,14 +3,14 @@ import Link from "next/link";
 import type { Blog } from "../../types/blog";
 import { makeExcerpt } from "../../libs/makeExcerpt"
 import ConvertToIcon from "../atoms/ConvertToIcon"
-import { convertDateFormat } from "../../libs/convertDateFormat";
+import { GetFormatedElms } from "../../libs/convertDateFormat";
 
 type Props = {
   blog: Blog
 }
 
 const ArchiveBlock: NextPage<Props> = ({ blog }) => {
-  const dateObj = convertDateFormat(blog.publishedAt)
+  const dateObj = new GetFormatedElms(blog.publishedAt).getConvertedObj()
   const { tagFormat, displayFormat } = dateObj
 
   return (
