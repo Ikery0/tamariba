@@ -28,6 +28,7 @@ const ThemeProveder = ({ children }: Props): JSX.Element => {
               }
               
               const mql = window.matchMedia("(prefers-color-scheme: dark)");
+              console.log(mql.matches)
               return mql.matches ? "dark" : "light";
             }
           
